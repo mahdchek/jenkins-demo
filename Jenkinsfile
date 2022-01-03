@@ -9,4 +9,8 @@ node {
         sh './mvnw clean compile'
     }
 
+    stage("unit test"){
+        sh "./mvnw test"
+    }
+
 }
