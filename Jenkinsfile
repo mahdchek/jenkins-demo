@@ -5,6 +5,7 @@ node {
 
 
     stage("build") {
+        sh 'chmod 777 mvnw'
         sh './mvnw clean compile'
     }
 
