@@ -13,4 +13,10 @@ node {
         sh "./mvnw test"
     }
 
+    stage("sonarqube"){
+        sh "./mvnw sonar:sonar " +
+                "  -Dsonar.projectKey=moh-demo " +
+                "  -Dsonar.host.url=http://localhost:9001 " +
+                "  -Dsonar.login=5f7149bd6d21223164a944b0b2101904d15ab384"
+    }
 }
